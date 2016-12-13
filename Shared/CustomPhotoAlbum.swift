@@ -216,36 +216,7 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         }
         
     }
-    /*
-    func save(data:NSMutableData, type:String){
-        
-        let imageLocation           =   self.appDelegate.location
-        let date                    =   Date()
-        let textToDraw              =   "\(type) - \(date) - \(imageLocation)"
-        
-        let imageTmp:UIImage        =   UIImage.init(data: data as Data)!
-        
-        let image = textToImage(drawText: textToDraw, inImage: imageTmp, atPoint: CGPoint.zero)
-        
-        getAlbum(title:"Fish", success:{}, failure:{})
-        
-        PHPhotoLibrary.shared().performChanges({
-            let assetRequest        =   PHAssetChangeRequest.creationRequestForAsset(from: image)
-            assetRequest.location   =   imageLocation
-            assetRequest.creationDate   =   date
-            assetRequest.isHidden   =   true
-            
-            let photosAsset         =   PHAsset.fetchAssets(in: self.album!, options: nil)
-            let assetPlaceholder    =   assetRequest.placeholderForCreatedAsset
-            let albumChangeRequest  =   PHAssetCollectionChangeRequest(for: self.album!, assets: photosAsset)
-            let fastEnumeration     =   NSArray(array: [assetPlaceholder!] as [PHObjectPlaceholder])
-            albumChangeRequest?.addAssets(fastEnumeration)
-            
-        }, completionHandler: { success, error in
-            if !success { print("error adding image: \(error)") }
-        })
-    }
-    */
+
     func createAlbum(title:String, success:@escaping ()->Void, failure:()->Void){
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate(format: "title = 'Fish'")
@@ -300,40 +271,6 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         
     }
 
-    /*
-    func addExif(image:UIImage)->NSData{
-        let imageData = UIImageJPEGRepresentation(image, 1.0)
-        
-        // create an imagesourceref
-        let source:CGImageSource = CGImageSourceCreateWithData(imageData as! CFData, nil)!
-        
-        // this is the type of image (e.g., public.jpeg)
-        let UTI:CFString = CGImageSourceGetType(source)!;
-        
-        // create a new data object and write the new image into it
-        let dest_data:NSMutableData = NSMutableData// [NSMutableData data];
-        CGImageDestinationRef destination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)dest_data, UTI, 1, NULL);
-        
-        if (!destination) {
-            NSLog(@"Error: Could not create image destination");
-        }
-        
-        // add the image contained in the image source to the destination, overidding the old metadata with our modified metadata
-        CGImageDestinationAddImageFromSource(destination, source, 0, (__bridge CFDictionaryRef) container.exifData);
-        BOOL success = NO;
-        success = CGImageDestinationFinalize(destination);
-        
-        if (!success) {
-            NSLog(@"Error: Could not create data from image destination");
-        }
-        
-        CFRelease(destination);
-        CFRelease(source);
-        
-        return dest_data;
-        
-    }
- */
     
 }
 
