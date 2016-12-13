@@ -1,4 +1,4 @@
-# KYC app
+# Fish
 
 An App which takes fish photos, stores them in a Fish Album. 
 
