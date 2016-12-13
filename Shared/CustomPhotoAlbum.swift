@@ -30,54 +30,56 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
     
     func getPhotos(from album:String)->[UIImage]?{
         getAlbum(title:"Fish",
-                 success:{},
-                 failure:{})
+                 success:{
+                    let fetchOptions    =   PHFetchOptions()
+                    fetchOptions.sortDescriptors        =   [NSSortDescriptor(key: "creationDate", ascending: true)]
+                    //fetchOptions.includeHiddenAssets    =   true
+                    
+                    self.images         =   PHAsset.fetchAssets(in: self.album!, options: fetchOptions
+                    )
+                    
+                    let imageManager    =   PHCachingImageManager()
+                    
+                    self.images.enumerateObjects({(object: AnyObject!,
+                        count: Int,
+                        stop: UnsafeMutablePointer<ObjCBool>) in
+                        
+                        if object is PHAsset{
+                            let asset = object as! PHAsset
+                            print("Inside  If object is PHAsset, This is number 1")
+                            
+                            let imageSize = CGSize(width: asset.pixelWidth,
+                                                   height: asset.pixelHeight)
+                            
+                            /* For faster performance, and maybe degraded image */
+                            let options = PHImageRequestOptions()
+                            options.deliveryMode = .fastFormat
+                            options.isSynchronous = true
+                            
+                            imageManager.requestImage(for: asset,
+                                                      targetSize: imageSize,
+                                                      contentMode: .aspectFill,
+                                                      options: options,
+                                                      resultHandler: {
+                                                        (image, info) -> Void in
+                                                        self.photo = image!
+                                                        /* The image is now available to us */
+                                                        self.addImgToArray(uploadImage: self.photo)
+                                                        print("enum for image, This is number 2")
+                            })
+                        }
+                    })
+        },
+        failure:{})
         
-        let fetchOptions    =   PHFetchOptions()
-        fetchOptions.sortDescriptors        =   [NSSortDescriptor(key: "creationDate", ascending: true)]
-        //fetchOptions.includeHiddenAssets    =   true
         
-        self.images         =   PHAsset.fetchAssets(in: self.album!, options: fetchOptions
-        )
-        
-        let imageManager    =   PHCachingImageManager()
-        
-        self.images.enumerateObjects({(object: AnyObject!,
-            count: Int,
-            stop: UnsafeMutablePointer<ObjCBool>) in
-            
-            if object is PHAsset{
-                let asset = object as! PHAsset
-                print("Inside  If object is PHAsset, This is number 1")
-                
-                let imageSize = CGSize(width: asset.pixelWidth,
-                                       height: asset.pixelHeight)
-                
-                /* For faster performance, and maybe degraded image */
-                let options = PHImageRequestOptions()
-                options.deliveryMode = .fastFormat
-                options.isSynchronous = true
-                
-                imageManager.requestImage(for: asset,
-                                          targetSize: imageSize,
-                                          contentMode: .aspectFill,
-                                          options: options,
-                                          resultHandler: {
-                                            (image, info) -> Void in
-                                            self.photo = image!
-                                            /* The image is now available to us */
-                                            self.addImgToArray(uploadImage: self.photo)
-                                            print("enum for image, This is number 2")
-                })
-            }
-        })
         
         return self.imagesToReturn
     }
 
     
 //    private func getAlbum(title:String)->PHAssetCollection?{
-    private func getAlbum(title:String, success:()->Void, failure:()->Void)->Void{
+    private func getAlbum(title:String, success:@escaping ()->Void, failure:@escaping ()->Void)->Void{
 
         PHPhotoLibrary.shared().register(self as PHPhotoLibraryChangeObserver)
         
@@ -92,19 +94,20 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         guard let tmp = result.firstObject as PHAssetCollection? else {
             createAlbum(title:title, success:{
                 print("SUCCESS AT CREATING A NEW ALBUM")
-                getAlbum(title: title, success:{
-                    self.album =  result.firstObject!
+                self.getAlbum(title: title, success:{
+                    success()
                 }, failure:{
                     print("FAILURE AT GETTING THE ALBUM")
+                    failure()
                 })
             }, failure:{ _ in
                 print("FAILURE AT CREATING A NEW ALBUM")
             })
             return
         }
- 
+        
         self.album = tmp
- 
+        success()
     }
     
     
@@ -141,7 +144,7 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         })
     }
     
-    func save(image:UIImage, type:String){
+    func save(image:UIImage, type:String, success:@escaping ()->Void, failure:@escaping ()->Void){
         
         if let imageLocation   =   self.appDelegate.location {
             Localizator().getAddress(location: imageLocation, completion: {
@@ -163,10 +166,14 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
                     let albumChangeRequest      =   PHAssetCollectionChangeRequest(for: self.album!)
                     albumChangeRequest?.addAssets([assetRequest.placeholderForCreatedAsset!] as NSArray)
                     
-                }, completionHandler: { success, error in
-                    if !success { print("error adding image: \(error)") }
+                }, completionHandler: { successFul, error in
+                    if !successFul {
+                        print("error adding image: \(error)")
+                        failure()
+                    }
                     else
                     {
+                        success()
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RELOAD_DEMAND"), object: nil)
                     }
                 })
@@ -179,28 +186,37 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
             
             let image                       =   self.textToImage(drawText: textToDraw, inImage: image, atPoint: CGPoint.zero)
             
-            self.getAlbum(title:"Fish", success:{}, failure:{})
-            
-            PHPhotoLibrary.shared().performChanges({
-                
-                let assetRequest            =   PHAssetChangeRequest.creationRequestForAsset(from: image)
-                assetRequest.creationDate   =   date
-                assetRequest.isHidden       =   true
-                
-                let albumChangeRequest      =   PHAssetCollectionChangeRequest(for: self.album!)
-                albumChangeRequest?.addAssets([assetRequest.placeholderForCreatedAsset!] as NSArray)
-                
-            }, completionHandler: { success, error in
-                if !success { print("error adding image: \(error)") }
-                else
-                {
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RELOAD_DEMAND"), object: nil)
-                }
+            self.getAlbum(title:"Fish", success:{
+                PHPhotoLibrary.shared().performChanges({
+                    
+                    let assetRequest            =   PHAssetChangeRequest.creationRequestForAsset(from: image)
+                    assetRequest.creationDate   =   date
+                    assetRequest.isHidden       =   true
+                    
+                    let albumChangeRequest      =   PHAssetCollectionChangeRequest(for: self.album!)
+                    albumChangeRequest?.addAssets([assetRequest.placeholderForCreatedAsset!] as NSArray)
+                    
+                }, completionHandler: { successFul, error in
+                    if !successFul {
+                        print("error adding image: \(error)")
+                        failure()
+                    }
+                    else
+                    {
+                        success()
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RELOAD_DEMAND"), object: nil)
+                    }
+                })
+            }, failure:{
+                print("ERROR IN GETTING THE ALBUM")
+                failure()
             })
+            
+            
         }
         
     }
-    
+    /*
     func save(data:NSMutableData, type:String){
         
         let imageLocation           =   self.appDelegate.location
@@ -229,8 +245,8 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
             if !success { print("error adding image: \(error)") }
         })
     }
-    
-    func createAlbum(title:String, success:()->Void, failure:()->Void){
+    */
+    func createAlbum(title:String, success:@escaping ()->Void, failure:()->Void){
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate(format: "title = 'Fish'")
         
@@ -239,8 +255,11 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         if rec == nil {
             PHPhotoLibrary.shared().performChanges({
                 PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: title)
-            }, completionHandler: { success, error in
-                if !success { print("error creating album: \(error)") }
+            }, completionHandler: { successFull, error in
+                if !successFull { print("error creating album: \(error)") }
+                else{
+                    success()
+                }
             })
         }
     }

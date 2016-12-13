@@ -640,7 +640,7 @@ private extension FusumaViewController {
         
         serviceController.storeTmp(document: document)
     }
-    
+    /*
     func createDocument(with data:NSMutableData){
         let docController:DocumentController    =   DocumentController()
         document                                =   docController.create()
@@ -659,7 +659,7 @@ private extension FusumaViewController {
         
         serviceController.storeTmp(document: document)
     }
-    
+    */
     func showAlert(with info:[String:String]){
         let alert = UIAlertController.init(title: info["TITLE"], message: info["MESSAGE"], preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
@@ -669,13 +669,19 @@ private extension FusumaViewController {
     }
     
     func save(image:UIImage) {
-        CustomPhotoAlbum().save(image: image, type: (self.docTypeButton.titleLabel?.text)!)
+        CustomPhotoAlbum().save(
+            image: image,
+            type: (self.docTypeButton.titleLabel?.text)!,
+            success:{},
+            failure:{})
 
     }
+    /*
     func save(data:NSMutableData) {
         CustomPhotoAlbum().save(data: data, type: (self.docTypeButton.titleLabel?.text)!)
         
     }
+ */
     
     func getCropImage(from view:FSImageCropView?){
         let normalizedX         =   (view?.contentOffset.x)! / (view?.contentSize.width)!
