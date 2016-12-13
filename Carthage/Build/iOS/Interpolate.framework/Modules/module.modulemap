@@ -1,0 +1,10 @@
+framework module Interpolate {
+  umbrella header "Interpolate.h"
+
+  export *
+  module * { export * }
+}
+
+module Interpolate.Swift {
+    header "Interpolate-Swift.h"
+}

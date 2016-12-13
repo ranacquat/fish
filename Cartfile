@@ -1,0 +1,7 @@
+github "SwiftyJSON/SwiftyJSON"
+github "Alamofire/Alamofire" ~> 4.0
+github "ninjaprox/NVActivityIndicatorView"
+github "daltoniam/Starscream" >= 2.0.0
+github "canatac/Fusuma" >= 1.0.1
+github "skywinder/ActionSheetPicker-3.0"
+github "marmelroy/Interpolate"

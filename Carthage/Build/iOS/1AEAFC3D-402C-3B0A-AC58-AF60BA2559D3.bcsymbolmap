@@ -1,0 +1,574 @@
+BCSymbolMap Version: 2.0
++[ActionSheetDistancePicker showPickerWithTitle:bigUnitString:bigUnitMax:selectedBigUnit:smallUnitString:smallUnitMax:selectedSmallUnit:target:action:origin:]
+-[ActionSheetDistancePicker initWithTitle:bigUnitString:bigUnitMax:selectedBigUnit:smallUnitString:smallUnitMax:selectedSmallUnit:target:action:origin:]
++[ActionSheetDistancePicker showPickerWithTitle:bigUnitString:bigUnitMax:selectedBigUnit:smallUnitString:smallUnitMax:selectedSmallUnit:target:action:origin:cancelAction:]
+-[ActionSheetDistancePicker initWithTitle:bigUnitString:bigUnitMax:selectedBigUnit:smallUnitString:smallUnitMax:selectedSmallUnit:target:action:origin:cancelAction:]
+-[ActionSheetDistancePicker configuredPickerView]
+-[ActionSheetDistancePicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetDistancePicker numberOfComponentsInPickerView:]
+-[ActionSheetDistancePicker pickerView:numberOfRowsInComponent:]
+-[ActionSheetDistancePicker pickerView:viewForRow:forComponent:reusingView:]
+-[ActionSheetDistancePicker pickerView:widthForComponent:]
+-[ActionSheetDistancePicker customButtonPressed:]
+-[ActionSheetDistancePicker bigUnitString]
+-[ActionSheetDistancePicker setBigUnitString:]
+-[ActionSheetDistancePicker selectedBigUnit]
+-[ActionSheetDistancePicker setSelectedBigUnit:]
+-[ActionSheetDistancePicker bigUnitMax]
+-[ActionSheetDistancePicker setBigUnitMax:]
+-[ActionSheetDistancePicker bigUnitDigits]
+-[ActionSheetDistancePicker setBigUnitDigits:]
+-[ActionSheetDistancePicker smallUnitString]
+-[ActionSheetDistancePicker setSmallUnitString:]
+-[ActionSheetDistancePicker selectedSmallUnit]
+-[ActionSheetDistancePicker setSelectedSmallUnit:]
+-[ActionSheetDistancePicker smallUnitMax]
+-[ActionSheetDistancePicker setSmallUnitMax:]
+-[ActionSheetDistancePicker smallUnitDigits]
+-[ActionSheetDistancePicker setSmallUnitDigits:]
+-[ActionSheetDistancePicker .cxx_destruct]
+_OBJC_IVAR_$_ActionSheetDistancePicker._bigUnitString
+_OBJC_IVAR_$_ActionSheetDistancePicker._selectedBigUnit
+_OBJC_IVAR_$_ActionSheetDistancePicker._bigUnitMax
+_OBJC_IVAR_$_ActionSheetDistancePicker._bigUnitDigits
+_OBJC_IVAR_$_ActionSheetDistancePicker._smallUnitString
+_OBJC_IVAR_$_ActionSheetDistancePicker._selectedSmallUnit
+_OBJC_IVAR_$_ActionSheetDistancePicker._smallUnitMax
+_OBJC_IVAR_$_ActionSheetDistancePicker._smallUnitDigits
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_UIPickerViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIPickerViewDelegate
+l_OBJC_PROTOCOL_$_UIPickerViewDataSource
+l_OBJC_LABEL_PROTOCOL_$_UIPickerViewDataSource
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetDistancePicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/CoreActionSheetPicker
++[ActionSheetStringPicker showPickerWithTitle:rows:initialSelection:doneBlock:cancelBlock:origin:]
+-[ActionSheetStringPicker initWithTitle:rows:initialSelection:doneBlock:cancelBlock:origin:]
++[ActionSheetStringPicker showPickerWithTitle:rows:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetStringPicker initWithTitle:rows:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetStringPicker configuredPickerView]
+-[ActionSheetStringPicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetStringPicker notifyTarget:didCancelWithAction:origin:]
+-[ActionSheetStringPicker pickerView:didSelectRow:inComponent:]
+-[ActionSheetStringPicker numberOfComponentsInPickerView:]
+-[ActionSheetStringPicker pickerView:numberOfRowsInComponent:]
+-[ActionSheetStringPicker pickerView:titleForRow:forComponent:]
+-[ActionSheetStringPicker pickerView:attributedTitleForRow:forComponent:]
+-[ActionSheetStringPicker pickerView:viewForRow:forComponent:reusingView:]
+-[ActionSheetStringPicker pickerView:widthForComponent:]
+-[ActionSheetStringPicker onActionSheetDone]
+-[ActionSheetStringPicker setOnActionSheetDone:]
+-[ActionSheetStringPicker onActionSheetCancel]
+-[ActionSheetStringPicker setOnActionSheetCancel:]
+-[ActionSheetStringPicker data]
+-[ActionSheetStringPicker setData:]
+-[ActionSheetStringPicker selectedIndex]
+-[ActionSheetStringPicker setSelectedIndex:]
+-[ActionSheetStringPicker .cxx_destruct]
+_OBJC_IVAR_$_ActionSheetStringPicker._onActionSheetDone
+_OBJC_IVAR_$_ActionSheetStringPicker._onActionSheetCancel
+_OBJC_IVAR_$_ActionSheetStringPicker._data
+_OBJC_IVAR_$_ActionSheetStringPicker._selectedIndex
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetStringPicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetStringPicker.h
+-[ActionSheetCustomPicker initWithTitle:delegate:showCancelButton:origin:]
++[ActionSheetCustomPicker showPickerWithTitle:delegate:showCancelButton:origin:]
+-[ActionSheetCustomPicker initWithTitle:delegate:showCancelButton:origin:initialSelections:]
++[ActionSheetCustomPicker showPickerWithTitle:delegate:showCancelButton:origin:initialSelections:]
+-[ActionSheetCustomPicker configuredPickerView]
+-[ActionSheetCustomPicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetCustomPicker notifyTarget:didCancelWithAction:origin:]
+-[ActionSheetCustomPicker delegate]
+-[ActionSheetCustomPicker setDelegate:]
+-[ActionSheetCustomPicker initialSelections]
+-[ActionSheetCustomPicker setInitialSelections:]
+-[ActionSheetCustomPicker .cxx_destruct]
+_OBJC_IVAR_$_ActionSheetCustomPicker._delegate
+_OBJC_IVAR_$_ActionSheetCustomPicker._initialSelections
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetCustomPicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetCustomPicker.h
+-[DistancePickerView initWithFrame:]
+-[DistancePickerView addLabel:forComponent:forLongestString:]
+-[DistancePickerView updateLabel:forComponent:]
+-[DistancePickerView didMoveToWindow]
+-[DistancePickerView .cxx_destruct]
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/DistancePickerView.m
++[ActionSheetMultipleStringPicker showPickerWithTitle:rows:initialSelection:doneBlock:cancelBlock:origin:]
+-[ActionSheetMultipleStringPicker initWithTitle:rows:initialSelection:doneBlock:cancelBlock:origin:]
++[ActionSheetMultipleStringPicker showPickerWithTitle:rows:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetMultipleStringPicker initWithTitle:rows:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetMultipleStringPicker configuredPickerView]
+-[ActionSheetMultipleStringPicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetMultipleStringPicker notifyTarget:didCancelWithAction:origin:]
+-[ActionSheetMultipleStringPicker pickerView:didSelectRow:inComponent:]
+-[ActionSheetMultipleStringPicker numberOfComponentsInPickerView:]
+-[ActionSheetMultipleStringPicker pickerView:numberOfRowsInComponent:]
+-[ActionSheetMultipleStringPicker pickerView:titleForRow:forComponent:]
+-[ActionSheetMultipleStringPicker pickerView:attributedTitleForRow:forComponent:]
+-[ActionSheetMultipleStringPicker performInitialSelectionInPickerView:]
+-[ActionSheetMultipleStringPicker selection]
+-[ActionSheetMultipleStringPicker selectedIndexes]
+-[ActionSheetMultipleStringPicker onActionSheetDone]
+-[ActionSheetMultipleStringPicker setOnActionSheetDone:]
+-[ActionSheetMultipleStringPicker onActionSheetCancel]
+-[ActionSheetMultipleStringPicker setOnActionSheetCancel:]
+-[ActionSheetMultipleStringPicker data]
+-[ActionSheetMultipleStringPicker setData:]
+-[ActionSheetMultipleStringPicker initialSelection]
+-[ActionSheetMultipleStringPicker setInitialSelection:]
+-[ActionSheetMultipleStringPicker .cxx_destruct]
+_OBJC_IVAR_$_ActionSheetMultipleStringPicker._onActionSheetDone
+_OBJC_IVAR_$_ActionSheetMultipleStringPicker._onActionSheetCancel
+_OBJC_IVAR_$_ActionSheetMultipleStringPicker._data
+_OBJC_IVAR_$_ActionSheetMultipleStringPicker._initialSelection
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetMultipleStringPicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetMultipleStringPicker.h
++[ActionSheetDatePicker showPickerWithTitle:datePickerMode:selectedDate:target:action:origin:]
++[ActionSheetDatePicker showPickerWithTitle:datePickerMode:selectedDate:target:action:origin:cancelAction:]
++[ActionSheetDatePicker showPickerWithTitle:datePickerMode:selectedDate:minimumDate:maximumDate:target:action:origin:]
++[ActionSheetDatePicker showPickerWithTitle:datePickerMode:selectedDate:doneBlock:cancelBlock:origin:]
++[ActionSheetDatePicker showPickerWithTitle:datePickerMode:selectedDate:minimumDate:maximumDate:doneBlock:cancelBlock:origin:]
+-[ActionSheetDatePicker initWithTitle:datePickerMode:selectedDate:target:action:origin:]
+-[ActionSheetDatePicker initWithTitle:datePickerMode:selectedDate:minimumDate:maximumDate:target:action:origin:]
+-[ActionSheetDatePicker initWithTitle:datePickerMode:selectedDate:target:action:origin:cancelAction:]
+-[ActionSheetDatePicker initWithTitle:datePickerMode:selectedDate:minimumDate:maximumDate:target:action:cancelAction:origin:]
+-[ActionSheetDatePicker initWithTitle:datePickerMode:selectedDate:doneBlock:cancelBlock:origin:]
+-[ActionSheetDatePicker configuredPickerView]
+___45-[ActionSheetDatePicker configuredPickerView]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[ActionSheetDatePicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetDatePicker notifyTarget:didCancelWithAction:origin:]
+-[ActionSheetDatePicker eventForDatePicker:]
+-[ActionSheetDatePicker customButtonPressed:]
+-[ActionSheetDatePicker minimumDate]
+-[ActionSheetDatePicker setMinimumDate:]
+-[ActionSheetDatePicker maximumDate]
+-[ActionSheetDatePicker setMaximumDate:]
+-[ActionSheetDatePicker minuteInterval]
+-[ActionSheetDatePicker setMinuteInterval:]
+-[ActionSheetDatePicker locale]
+-[ActionSheetDatePicker setLocale:]
+-[ActionSheetDatePicker calendar]
+-[ActionSheetDatePicker setCalendar:]
+-[ActionSheetDatePicker timeZone]
+-[ActionSheetDatePicker setTimeZone:]
+-[ActionSheetDatePicker countDownDuration]
+-[ActionSheetDatePicker setCountDownDuration:]
+-[ActionSheetDatePicker onActionSheetDone]
+-[ActionSheetDatePicker setOnActionSheetDone:]
+-[ActionSheetDatePicker onActionSheetCancel]
+-[ActionSheetDatePicker setOnActionSheetCancel:]
+-[ActionSheetDatePicker datePickerMode]
+-[ActionSheetDatePicker setDatePickerMode:]
+-[ActionSheetDatePicker selectedDate]
+-[ActionSheetDatePicker setSelectedDate:]
+-[ActionSheetDatePicker .cxx_destruct]
+___block_descriptor_tmp
+_OBJC_IVAR_$_ActionSheetDatePicker._minimumDate
+_OBJC_IVAR_$_ActionSheetDatePicker._maximumDate
+_OBJC_IVAR_$_ActionSheetDatePicker._minuteInterval
+_OBJC_IVAR_$_ActionSheetDatePicker._locale
+_OBJC_IVAR_$_ActionSheetDatePicker._calendar
+_OBJC_IVAR_$_ActionSheetDatePicker._timeZone
+_OBJC_IVAR_$_ActionSheetDatePicker._countDownDuration
+_OBJC_IVAR_$_ActionSheetDatePicker._onActionSheetDone
+_OBJC_IVAR_$_ActionSheetDatePicker._onActionSheetCancel
+_OBJC_IVAR_$_ActionSheetDatePicker._datePickerMode
+_OBJC_IVAR_$_ActionSheetDatePicker._selectedDate
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetDatePicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetDatePicker.h
+__destroy_helper_block_
+__copy_helper_block_
+__45-[ActionSheetDatePicker configuredPickerView]_block_invoke
++[MyPopoverController canShowPopover]
+-[MyPopoverController adaptivePresentationStyleForPresentationController:traitCollection:]
+-[AbstractActionSheetPicker init]
+-[AbstractActionSheetPicker setTextColor:]
+-[AbstractActionSheetPicker initWithTarget:successAction:cancelAction:origin:]
+-[AbstractActionSheetPicker dealloc]
+-[AbstractActionSheetPicker configuredPickerView]
+-[AbstractActionSheetPicker notifyTarget:didSucceedWithAction:origin:]
+-[AbstractActionSheetPicker notifyTarget:didCancelWithAction:origin:]
+-[AbstractActionSheetPicker showActionSheetPicker]
+-[AbstractActionSheetPicker actionPickerDone:]
+-[AbstractActionSheetPicker actionPickerCancel:]
+-[AbstractActionSheetPicker dismissPicker]
+-[AbstractActionSheetPicker customButtons]
+-[AbstractActionSheetPicker addCustomButtonWithTitle:value:]
+-[AbstractActionSheetPicker addCustomButtonWithTitle:actionBlock:]
+___66-[AbstractActionSheetPicker addCustomButtonWithTitle:actionBlock:]_block_invoke
+-[AbstractActionSheetPicker addCustomButtonWithTitle:target:selector:]
+-[AbstractActionSheetPicker customButtonPressed:]
+-[AbstractActionSheetPicker setCancelButton:]
+-[AbstractActionSheetPicker setDoneButton:]
+-[AbstractActionSheetPicker hidePickerWithCancelAction]
+-[AbstractActionSheetPicker createPickerToolbarWithTitle:]
+-[AbstractActionSheetPicker createToolbarLabelWithTitle:titleTextAttributes:andAttributedTitle:]
+-[AbstractActionSheetPicker createButtonWithType:target:action:]
+-[AbstractActionSheetPicker setPickerBackgroundColor:]
+-[AbstractActionSheetPicker blurPickerBackground]
+-[AbstractActionSheetPicker viewSize]
+-[AbstractActionSheetPicker isViewPortrait]
+-[AbstractActionSheetPicker isValidOrigin:]
+-[AbstractActionSheetPicker storedOrigin]
+-[AbstractActionSheetPicker presentPickerForView:]
+-[AbstractActionSheetPicker configureAndPresentActionSheetForView:]
+-[AbstractActionSheetPicker didRotate:]
+-[AbstractActionSheetPicker presentActionSheet:]
+-[AbstractActionSheetPicker configureAndPresentPopoverForView:]
+-[AbstractActionSheetPicker presentPopover:]
+___44-[AbstractActionSheetPicker presentPopover:]_block_invoke
+___44-[AbstractActionSheetPicker presentPopover:]_block_invoke.458
+___copy_helper_block_.459
+___destroy_helper_block_.460
+___44-[AbstractActionSheetPicker presentPopover:]_block_invoke.464
+___copy_helper_block_.465
+___destroy_helper_block_.466
+-[AbstractActionSheetPicker popoverControllerDidDismissPopover:]
+-[AbstractActionSheetPicker gestureRecognizerShouldBegin:]
+-[AbstractActionSheetPicker actionSheet]
+-[AbstractActionSheetPicker setActionSheet:]
+-[AbstractActionSheetPicker tag]
+-[AbstractActionSheetPicker setTag:]
+-[AbstractActionSheetPicker borderWidth]
+-[AbstractActionSheetPicker setBorderWidth:]
+-[AbstractActionSheetPicker toolbar]
+-[AbstractActionSheetPicker setToolbar:]
+-[AbstractActionSheetPicker title]
+-[AbstractActionSheetPicker setTitle:]
+-[AbstractActionSheetPicker pickerView]
+-[AbstractActionSheetPicker setPickerView:]
+-[AbstractActionSheetPicker setCustomButtons:]
+-[AbstractActionSheetPicker hideCancel]
+-[AbstractActionSheetPicker setHideCancel:]
+-[AbstractActionSheetPicker presentFromRect]
+-[AbstractActionSheetPicker setPresentFromRect:]
+-[AbstractActionSheetPicker titleTextAttributes]
+-[AbstractActionSheetPicker setTitleTextAttributes:]
+-[AbstractActionSheetPicker attributedTitle]
+-[AbstractActionSheetPicker setAttributedTitle:]
+-[AbstractActionSheetPicker pickerTextAttributes]
+-[AbstractActionSheetPicker setPickerTextAttributes:]
+-[AbstractActionSheetPicker pickerBackgroundColor]
+-[AbstractActionSheetPicker toolbarBackgroundColor]
+-[AbstractActionSheetPicker setToolbarBackgroundColor:]
+-[AbstractActionSheetPicker toolbarButtonsColor]
+-[AbstractActionSheetPicker setToolbarButtonsColor:]
+-[AbstractActionSheetPicker pickerBlurRadius]
+-[AbstractActionSheetPicker setPickerBlurRadius:]
+-[AbstractActionSheetPicker popoverBackgroundViewClass]
+-[AbstractActionSheetPicker setPopoverBackgroundViewClass:]
+-[AbstractActionSheetPicker supportedInterfaceOrientations]
+-[AbstractActionSheetPicker setSupportedInterfaceOrientations:]
+-[AbstractActionSheetPicker tapDismissAction]
+-[AbstractActionSheetPicker setTapDismissAction:]
+-[AbstractActionSheetPicker popoverDisabled]
+-[AbstractActionSheetPicker setPopoverDisabled:]
+-[AbstractActionSheetPicker barButtonItem]
+-[AbstractActionSheetPicker setBarButtonItem:]
+-[AbstractActionSheetPicker doneBarButtonItem]
+-[AbstractActionSheetPicker setDoneBarButtonItem:]
+-[AbstractActionSheetPicker cancelBarButtonItem]
+-[AbstractActionSheetPicker setCancelBarButtonItem:]
+-[AbstractActionSheetPicker containerView]
+-[AbstractActionSheetPicker setContainerView:]
+-[AbstractActionSheetPicker target]
+-[AbstractActionSheetPicker setTarget:]
+-[AbstractActionSheetPicker successAction]
+-[AbstractActionSheetPicker setSuccessAction:]
+-[AbstractActionSheetPicker cancelAction]
+-[AbstractActionSheetPicker setCancelAction:]
+-[AbstractActionSheetPicker popOverController]
+-[AbstractActionSheetPicker setPopOverController:]
+-[AbstractActionSheetPicker filter]
+-[AbstractActionSheetPicker setFilter:]
+-[AbstractActionSheetPicker context]
+-[AbstractActionSheetPicker setContext:]
+-[AbstractActionSheetPicker selfReference]
+-[AbstractActionSheetPicker setSelfReference:]
+-[AbstractActionSheetPicker .cxx_destruct]
+l_OBJC_PROTOCOL_$_UIAdaptivePresentationControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIAdaptivePresentationControllerDelegate
+_OBJC_IVAR_$_AbstractActionSheetPicker._borderWidth
+_OBJC_IVAR_$_AbstractActionSheetPicker._pickerView
+_OBJC_IVAR_$_AbstractActionSheetPicker._actionSheet
+_OBJC_IVAR_$_AbstractActionSheetPicker._popOverController
+_OBJC_IVAR_$_AbstractActionSheetPicker._customButtons
+___block_literal_global
+_OBJC_IVAR_$_AbstractActionSheetPicker._pickerBackgroundColor
+_OBJC_IVAR_$_AbstractActionSheetPicker._barButtonItem
+_OBJC_IVAR_$_AbstractActionSheetPicker._containerView
+___block_descriptor_tmp.457
+___block_descriptor_tmp.461
+___block_descriptor_tmp.467
+_OBJC_IVAR_$_AbstractActionSheetPicker._tag
+_OBJC_IVAR_$_AbstractActionSheetPicker._toolbar
+_OBJC_IVAR_$_AbstractActionSheetPicker._title
+_OBJC_IVAR_$_AbstractActionSheetPicker._hideCancel
+_OBJC_IVAR_$_AbstractActionSheetPicker._presentFromRect
+_OBJC_IVAR_$_AbstractActionSheetPicker._titleTextAttributes
+_OBJC_IVAR_$_AbstractActionSheetPicker._attributedTitle
+_OBJC_IVAR_$_AbstractActionSheetPicker._pickerTextAttributes
+_OBJC_IVAR_$_AbstractActionSheetPicker._toolbarBackgroundColor
+_OBJC_IVAR_$_AbstractActionSheetPicker._toolbarButtonsColor
+_OBJC_IVAR_$_AbstractActionSheetPicker._pickerBlurRadius
+_OBJC_IVAR_$_AbstractActionSheetPicker._popoverBackgroundViewClass
+_OBJC_IVAR_$_AbstractActionSheetPicker._supportedInterfaceOrientations
+_OBJC_IVAR_$_AbstractActionSheetPicker._tapDismissAction
+_OBJC_IVAR_$_AbstractActionSheetPicker._popoverDisabled
+_OBJC_IVAR_$_AbstractActionSheetPicker._doneBarButtonItem
+_OBJC_IVAR_$_AbstractActionSheetPicker._cancelBarButtonItem
+_OBJC_IVAR_$_AbstractActionSheetPicker._target
+_OBJC_IVAR_$_AbstractActionSheetPicker._successAction
+_OBJC_IVAR_$_AbstractActionSheetPicker._cancelAction
+_OBJC_IVAR_$_AbstractActionSheetPicker._filter
+_OBJC_IVAR_$_AbstractActionSheetPicker._context
+_OBJC_IVAR_$_AbstractActionSheetPicker._selfReference
+l_OBJC_PROTOCOL_$_UIGestureRecognizerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIGestureRecognizerDelegate
+l_OBJC_PROTOCOL_$_UIPopoverControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIPopoverControllerDelegate
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/AbstractActionSheetPicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/AbstractActionSheetPicker.h
+__44-[AbstractActionSheetPicker presentPopover:]_block_invoke.464
+__44-[AbstractActionSheetPicker presentPopover:]_block_invoke.458
+__44-[AbstractActionSheetPicker presentPopover:]_block_invoke
+UIInterfaceOrientationIsPortrait
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
+__66-[AbstractActionSheetPicker addCustomButtonWithTitle:actionBlock:]_block_invoke
+isIPhone4
++[ActionSheetLocalePicker showPickerWithTitle:initialSelection:doneBlock:cancelBlock:origin:]
+-[ActionSheetLocalePicker initWithTitle:initialSelection:doneBlock:cancelBlock:origin:]
++[ActionSheetLocalePicker showPickerWithTitle:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetLocalePicker initWithTitle:initialSelection:target:successAction:cancelAction:origin:]
+-[ActionSheetLocalePicker configuredPickerView]
+-[ActionSheetLocalePicker selectCurrentLocale:]
+-[ActionSheetLocalePicker fillContinentsAndCities]
+___50-[ActionSheetLocalePicker fillContinentsAndCities]_block_invoke
+-[ActionSheetLocalePicker setSelectedRows]
+-[ActionSheetLocalePicker notifyTarget:didSucceedWithAction:origin:]
+-[ActionSheetLocalePicker notifyTarget:didCancelWithAction:origin:]
+-[ActionSheetLocalePicker numberOfComponentsInPickerView:]
+-[ActionSheetLocalePicker pickerView:numberOfRowsInComponent:]
+-[ActionSheetLocalePicker pickerView:widthForComponent:]
+-[ActionSheetLocalePicker pickerView:viewForRow:forComponent:reusingView:]
+-[ActionSheetLocalePicker pickerView:didSelectRow:inComponent:]
+-[ActionSheetLocalePicker getCitiesByContinent:]
+-[ActionSheetLocalePicker customButtonPressed:]
+-[ActionSheetLocalePicker onActionSheetDone]
+-[ActionSheetLocalePicker setOnActionSheetDone:]
+-[ActionSheetLocalePicker onActionSheetCancel]
+-[ActionSheetLocalePicker setOnActionSheetCancel:]
+-[ActionSheetLocalePicker initialTimeZone]
+-[ActionSheetLocalePicker setInitialTimeZone:]
+-[ActionSheetLocalePicker selectedContinent]
+-[ActionSheetLocalePicker setSelectedContinent:]
+-[ActionSheetLocalePicker selectedCity]
+-[ActionSheetLocalePicker setSelectedCity:]
+-[ActionSheetLocalePicker continentsAndCityDictionary]
+-[ActionSheetLocalePicker setContinentsAndCityDictionary:]
+-[ActionSheetLocalePicker continents]
+-[ActionSheetLocalePicker setContinents:]
+-[ActionSheetLocalePicker .cxx_destruct]
+_OBJC_IVAR_$_ActionSheetLocalePicker._continents
+_OBJC_IVAR_$_ActionSheetLocalePicker._onActionSheetDone
+_OBJC_IVAR_$_ActionSheetLocalePicker._onActionSheetCancel
+_OBJC_IVAR_$_ActionSheetLocalePicker._continentsAndCityDictionary
+_OBJC_IVAR_$_ActionSheetLocalePicker._initialTimeZone
+_OBJC_IVAR_$_ActionSheetLocalePicker._selectedContinent
+_OBJC_IVAR_$_ActionSheetLocalePicker._selectedCity
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetLocalePicker.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/ActionSheetLocalePicker.h
+__50-[ActionSheetLocalePicker fillContinentsAndCities]_block_invoke
+-[SWActionSheet dismissWithClickedButtonIndex:animated:]
+___56-[SWActionSheet dismissWithClickedButtonIndex:animated:]_block_invoke
+___56-[SWActionSheet dismissWithClickedButtonIndex:animated:]_block_invoke.9
+___copy_helper_block_.14
+___destroy_helper_block_.15
+-[SWActionSheet destroyWindow]
+-[SWActionSheet window]
+-[SWActionSheet actionSheetContainer]
+-[SWActionSheet initWithView:]
+-[SWActionSheet configureFrameForBounds:]
+-[SWActionSheet showFromBarButtonItem:animated:]
+-[SWActionSheet showInContainerView]
+-[SWActionSheet showInContainerViewAnimated:]
+___45-[SWActionSheet showInContainerViewAnimated:]_block_invoke
+___copy_helper_block_.70
+___destroy_helper_block_.71
+-[SWActionSheet bgView]
+-[SWActionSheet setBgView:]
+-[SWActionSheet presented]
+-[SWActionSheet setPresented:]
+-[SWActionSheet .cxx_destruct]
+-[SWActionSheetVC preferredStatusBarStyle]
+-[SWActionSheetVC setActionSheet:]
+-[SWActionSheetVC viewWillAppear:]
+-[SWActionSheetVC presentActionSheetAnimated:]
+-[SWActionSheetVC prefersStatusBarHidden]
+-[SWActionSheetVC shouldAutorotateToInterfaceOrientation:]
+-[SWActionSheetVC shouldAutorotate]
+-[SWActionSheetVC actionSheet]
+-[SWActionSheetVC .cxx_destruct]
+_OBJC_IVAR_$_SWActionSheet.view
+___block_descriptor_tmp.17
+_OBJC_IVAR_$_SWActionSheet.SWActionSheetWindow
+_OBJC_IVAR_$_SWActionSheet._bgView
+___block_descriptor_tmp.72
+_OBJC_IVAR_$_SWActionSheet._presented
+_OBJC_IVAR_$_SWActionSheetVC._actionSheet
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/SWActionSheet.m
+/Users/janatac/Documents/KYC/KYCAss/Carthage/Checkouts/ActionSheetPicker-3.0/Pickers/SWActionSheet.h
+__45-[SWActionSheet showInContainerViewAnimated:]_block_invoke
+__56-[SWActionSheet dismissWithClickedButtonIndex:animated:]_block_invoke.9
+__56-[SWActionSheet dismissWithClickedButtonIndex:animated:]_block_invoke
+/Users/janatac/Library/Developer/Xcode/DerivedData/ActionSheetPicker-3.0-actjvcjuiaovedcpidodmbzxulcy/Build/Intermediates/CoreActionSheetPicker.build/Release-iphoneos/CoreActionSheetPicker.build/DerivedSources/CoreActionSheetPicker_vers.c
+__ZL15__ARCLite__loadv
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+Apple LLVM version 8.0.0 (clang-800.0.42)
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -fembed-bitcode -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/arm64 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/Symbols/BuiltProducts -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -fgnu-inline-asm -Wno-error=incomplete-umbrella -Wno-error=incomplete-umbrella -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~962/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.o -mlinker-version=274.1
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+isdigit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.Internal.sdk/usr/include/ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_lazy_pointers
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__ARCLite__load
+install_swiftV1
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
