@@ -108,7 +108,6 @@ class MasterViewController: UITableViewController {
             case .showAllPhotos:
                 destination.fetchResult = allPhotos
             case .showCollection:
-
                 // get the asset collection for the selected row
                 let indexPath = tableView.indexPath(for: cell)!
                 let collection: PHCollection
@@ -121,6 +120,11 @@ class MasterViewController: UITableViewController {
                 }
 
                 // configure the view controller with the asset collection
+                //CAT
+                let allPhotosInCollectionOptions                    =   PHFetchOptions()
+                allPhotosInCollectionOptions.includeHiddenAssets    =   true
+                //
+                
                 guard let assetCollection = collection as? PHAssetCollection
                     else { fatalError("expected asset collection") }
                 destination.fetchResult = PHAsset.fetchAssets(in: assetCollection, options: nil)

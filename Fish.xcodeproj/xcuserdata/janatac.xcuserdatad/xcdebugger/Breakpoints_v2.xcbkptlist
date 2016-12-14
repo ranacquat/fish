@@ -319,7 +319,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "260"
             endingLineNumber = "260"
-            landmarkName = "createAlbum(title:success:failure:)"
+            landmarkName = "textToImage(drawText:inImage:atPoint:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

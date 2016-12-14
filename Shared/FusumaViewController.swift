@@ -640,26 +640,7 @@ private extension FusumaViewController {
         
         serviceController.storeTmp(document: document)
     }
-    /*
-    func createDocument(with data:NSMutableData){
-        let docController:DocumentController    =   DocumentController()
-        document                                =   docController.create()
-        document.info["IMAGE"]                  =   data//UIImagePNGRepresentation(image)
-        
-        let alert = UIAlertController.init(title: "Sauvegarde de l'image", message: "Voulez-vous sauvegarder l'image dans l'Album photo 'Fish' ?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
-            self.save(data:data)
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Non, merci !", style: UIAlertActionStyle.cancel, handler: {_ in
-            
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-        serviceController.storeTmp(document: document)
-    }
-    */
+
     func showAlert(with info:[String:String]){
         let alert = UIAlertController.init(title: info["TITLE"], message: info["MESSAGE"], preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
@@ -674,14 +655,7 @@ private extension FusumaViewController {
             type: (self.docTypeButton.titleLabel?.text)!,
             success:{},
             failure:{})
-
     }
-    /*
-    func save(data:NSMutableData) {
-        CustomPhotoAlbum().save(data: data, type: (self.docTypeButton.titleLabel?.text)!)
-        
-    }
- */
     
     func getCropImage(from view:FSImageCropView?){
         let normalizedX         =   (view?.contentOffset.x)! / (view?.contentSize.width)!
