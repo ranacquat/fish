@@ -75,7 +75,8 @@ public final class FusumaViewController: UIViewController {
         case camera
         case library
     }
-
+    var counter                                         =   0
+    var timer:Timer                                     =   Timer.init()
     public var hasVideo                                 =   false
 
     var mode:                       Mode                =   .camera
@@ -86,7 +87,7 @@ public final class FusumaViewController: UIViewController {
     var serviceController:          ServiceController   =   ServiceController()
     var image:                      UIImage             =   UIImage()
     var document:                   Document            =   Document()
-    var typeList                                        =   ["RIB", "CNI", "Bulletin de salaire"]
+    var typeList                                        =   ["Poisson", "Chien", "Autre..."]
     
     var typeIsUp:Bool                                   =   false
     
@@ -106,7 +107,7 @@ public final class FusumaViewController: UIViewController {
     @IBOutlet var docTypeButton: UIButton!
     
     @IBAction func docType(_ sender: Any) {
-        let assp = ActionSheetStringPicker.show(withTitle: "Type de document", rows:
+        let assp = ActionSheetStringPicker.show(withTitle: "Objet de la photo", rows:
                 typeList
                 , initialSelection: 0, doneBlock: {
                     picker, values, indexes in
@@ -141,17 +142,6 @@ public final class FusumaViewController: UIViewController {
         fusumaCropImage = false
         setNotifications()
         setSubViewsWhenViewDidLoad()
-        
-        UIView.animate(withDuration: 3, delay: 0, options: [.repeat, .autoreverse], animations: {
-            self.titleLabel.textColor = UIColor.black
-            self.titleLabel.textColor = UIColor.green
-            //self.titleLabel.textColor = UIColor.gray
-            //self.titleLabel.textColor = UIColor.red
-        }, completion: {_ in
-            self.titleLabel.textColor = UIColor.green
-            self.titleLabel.textColor = UIColor.black
-            
-        })
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -203,20 +193,11 @@ public final class FusumaViewController: UIViewController {
         
         let width       =   UIScreen.main.bounds.width
         let height      =   UIScreen.main.bounds.height
-        
-
-        
         let frame2      =   CGRect(x: 0, y: 0, width: height, height: width)
         cameraShotContainer.frame = frame2
-        
         cameraView.videoLayer?.removeFromSuperlayer()
-        
         cameraView.previewViewContainer.bounds = CGRect(x: 0, y: 0, width: width, height: height - 50)
         cameraView.previewViewContainer.setNeedsLayout()
-        
-        
-        print("WELL : \(cameraView.previewViewContainer.bounds)")
-        
         cameraView.videoLayer?.frame           =   cameraView.previewViewContainer.bounds
         cameraView.previewViewContainer.layer.addSublayer(cameraView.videoLayer!)
  
@@ -242,6 +223,21 @@ public final class FusumaViewController: UIViewController {
         }
     }
  
+    func animate() {
+        UIView.transition(with: self.docTypeButton.titleLabel!,
+                          duration: 1.0,
+                          options: [.curveEaseInOut],
+                          animations: { () -> Void in
+                            
+                            self.colorChange = Interpolate(from: UIColor.white,
+                                                           to: UIColor.red,
+                                                           apply: { (color) in
+                                                            self.docTypeButton.titleLabel?.textColor = color})
+                            self.colorChange?.animate(duration: 1.0)
+                            self.counter += 1
+        }, completion: nil)
+    }
+    
     override public var prefersStatusBarHidden : Bool {
         return true
     }
@@ -311,6 +307,10 @@ private extension FusumaViewController {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "LOGIN_FAILED"), object: nil, queue: OperationQueue.main, using: {notification in
             self.showAlert(with: notification.object as! [String:String])
+        })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "SPINNER_SHOW"), object: nil, queue: OperationQueue.main, using: { notification in
+            self.showSpinner(notification: notification)
         })
     }
     
@@ -406,32 +406,9 @@ private extension FusumaViewController {
     func setTitleLabel(){
         titleLabel.textColor    =   fusumaBaseTintColor
         titleLabel.font         =   fusumaTitleFont
-        // CAT : INTERPOLATE
-        
-        
-        
-        /*
-        UIView.animate(withDuration: 4, delay: 0, options: [.repeat], animations: {
-            print("animation.......")
-            UIView.setAnimationRepeatCount(Float.infinity)
-            self.colorChange = Interpolate(from: UIColor.white,
-                                      to: UIColor.red,
-                                      apply: { (color) in
-                                        self.titleLabel.textColor = color
-            })
-            self.colorChange?.animate(duration: 1)
-        }, completion: {_ in
-            self.colorChange = Interpolate(from: UIColor.red,
-                                           to: UIColor.white,
-                                           apply: { (color) in
-                                            self.titleLabel.textColor = color
-            })
-            self.colorChange?.animate(duration: 1)
-        })
- */
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "STOP_ANIMATION"), object: nil, queue: OperationQueue.main, using: {notification in
-                //self.colorChange?.stopAnimation()
+            //self.timer.invalidate()
         })
     }
     
@@ -450,10 +427,12 @@ private extension FusumaViewController {
         self.docTypeButton.setNeedsLayout() // do reload changes
         self.docTypeButton.setAttributedTitle(NSAttributedString.init(string: indexes!), for: UIControlState.normal)
         self.docTypeButton.titleLabel?.textColor = UIColor(white: 1.0, alpha: 1.0)
+        self.colorChange = Interpolate(from: UIColor.red,
+                                       to: UIColor.white,
+                                       apply: { (color) in
+                                        self.docTypeButton.titleLabel?.textColor = color})
+        self.colorChange?.animate(duration: 1.0)
         
-        
-        self.typeIsUp   =   true
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "STOP_ANIMATION"), object: nil)
     }
     
     func buildLibraryButton(with albumImage:UIImage?, color:UIColor?, adjustsImageWhenHighlighted:Bool?){
@@ -548,6 +527,8 @@ private extension FusumaViewController {
             self.view.bringSubview(toFront: photoLibraryViewerContainer)
         case .camera:
             //titleLabel.text = NSLocalizedString(fusumaCameraTitle, comment: fusumaCameraTitle)
+            self.timer.fire()
+
             titleLabel.isHidden = true
             
             highlightButton(cameraButton)
@@ -653,8 +634,13 @@ private extension FusumaViewController {
         CustomPhotoAlbum().save(
             image: image,
             type: (self.docTypeButton.titleLabel?.text)!,
-            success:{},
+            success:{
+                NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":1.0, "title":"Picture saved !"])
+                
+                SwiftSpinner.hide()
+        },
             failure:{})
+        NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.2, "title":"Saving Picture..."])
     }
     
     func getCropImage(from view:FSImageCropView?){
@@ -698,5 +684,9 @@ private extension FusumaViewController {
             }
         })
 
+    }
+    func showSpinner(notification:Notification){
+        let info:[String:Any] = notification.object as! [String:Any]
+        SwiftSpinner.show(progress: info["progress"] as! Double, title: info["title"] as! String)
     }
 }

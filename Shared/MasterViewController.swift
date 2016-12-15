@@ -36,6 +36,9 @@ class MasterViewController: UITableViewController {
     var userCollections: PHFetchResult<PHCollection>!
     let sectionLocalizedTitles = ["", NSLocalizedString("Smart Albums", comment: ""), NSLocalizedString("Albums", comment: "")]
 
+    // CAT
+    let appDelegate                     =   UIApplication.shared.delegate as! AppDelegate
+    
     // MARK: UIViewController / Lifecycle
     
     override func viewDidLoad() {
@@ -51,7 +54,8 @@ class MasterViewController: UITableViewController {
         allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
         smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
         userCollections = PHCollectionList.fetchTopLevelUserCollections(with: nil)
-
+        //CAT
+        appDelegate.userCollections             =   userCollections
         PHPhotoLibrary.shared().register(self)
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "LOCALIZATION_FAILED"), object: nil, queue: OperationQueue.main, using: {_ in
@@ -120,13 +124,16 @@ class MasterViewController: UITableViewController {
                 }
 
                 // configure the view controller with the asset collection
+
+                
+                guard let assetCollection = collection as? PHAssetCollection
+                    else { fatalError("expected asset collection") }
+                
                 //CAT
                 let allPhotosInCollectionOptions                    =   PHFetchOptions()
                 allPhotosInCollectionOptions.includeHiddenAssets    =   true
                 //
-                
-                guard let assetCollection = collection as? PHAssetCollection
-                    else { fatalError("expected asset collection") }
+
                 destination.fetchResult = PHAsset.fetchAssets(in: assetCollection, options: nil)
                 destination.assetCollection = assetCollection
         }

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503298066.545179"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "save(image:type:success:failure:)"
             landmarkType = "7">
             <Locations>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/FusumaViewController.swift"
-            timestampString = "503257422.29257"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "changeOrientation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,127 +134,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Shared/FusumaViewController.swift"
-            timestampString = "503257422.29257"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
-            landmarkName = "setTitleLabel()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fish.FusumaViewController.(setTitleLabel in _6F6B6A87E32B1AE8361A88BCE9EE7F23) () -&gt; ()"
-                  moduleName = "Fish"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janatac/Documents/Fish/Shared/FusumaViewController.swift"
-                  timestampString = "503296182.048746"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "433"
-                  endingLineNumber = "433"
-                  offsetFromSymbolStart = "756">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fish.FusumaViewController.((setTitleLabel in _6F6B6A87E32B1AE8361A88BCE9EE7F23) () -&gt; ()).(closure #1)"
-                  moduleName = "Fish"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janatac/Documents/Fish/Shared/FusumaViewController.swift"
-                  timestampString = "503296182.050142"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "435"
-                  endingLineNumber = "435"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Shared/FusumaViewController.swift"
-            timestampString = "503257422.29257"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
-            landmarkName = "setTitleLabel()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fish.FusumaViewController.(setTitleLabel in _6F6B6A87E32B1AE8361A88BCE9EE7F23) () -&gt; ()"
-                  moduleName = "Fish"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janatac/Documents/Fish/Shared/FusumaViewController.swift"
-                  timestampString = "503296182.053177"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "433"
-                  endingLineNumber = "433"
-                  offsetFromSymbolStart = "756">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fish.FusumaViewController.((setTitleLabel in _6F6B6A87E32B1AE8361A88BCE9EE7F23) () -&gt; ()).(closure #1)"
-                  moduleName = "Fish"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janatac/Documents/Fish/Shared/FusumaViewController.swift"
-                  timestampString = "503296182.0549"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "435"
-                  endingLineNumber = "435"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Shared/FusumaViewController.swift"
-            timestampString = "503257263.3832"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503298066.545179"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "save(image:type:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503296960.276394"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "getAlbum(title:success:failure:)"
             landmarkType = "7">
             <Locations>
@@ -314,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503298066.545179"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "textToImage(drawText:inImage:atPoint:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503296960.276394"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "getAlbum(title:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/CustomPhotoAlbum.swift"
-            timestampString = "503298066.545179"
+            timestampString = "503470646.202808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "save(image:type:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>

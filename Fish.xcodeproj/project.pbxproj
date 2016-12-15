@@ -15,6 +15,11 @@
 		118FE1221CEF0525004F2F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118FE1201CEF0525004F2F51 /* LaunchScreen.storyboard */; };
 		11E1BB9B1CF1371A0057E18F /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1BB9A1CF1371A0057E18F /* GridViewCell.swift */; };
 		11E1BB9E1CF137450057E18F /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1BB9D1CF137450057E18F /* AssetViewController.swift */; };
+		8C00F4A21E02510500DC6E82 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C00F4A11E02510500DC6E82 /* SwiftSpinner.swift */; };
+		8C00F4AA1E0255A300DC6E82 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C00F4A91E0255A300DC6E82 /* FishTests.swift */; };
+		8C00F4B11E0255C300DC6E82 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C00F49F1E01B88500DC6E82 /* APITest.swift */; };
+		8C00F4B31E02591600DC6E82 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C00F4B21E02591600DC6E82 /* Alamofire.framework */; };
+		8C00F4B41E02596300DC6E82 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C00F4B21E02591600DC6E82 /* Alamofire.framework */; };
 		8CCF28051DF6EAC900A57A08 /* Fusuma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCF28041DF6EAC900A57A08 /* Fusuma.framework */; };
 		8CD7D7541DF7084600453C6F /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7D7461DF7084600453C6F /* FSAlbumView.swift */; };
 		8CD7D7561DF7084600453C6F /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7D7481DF7084600453C6F /* FSAlbumViewCell.swift */; };
@@ -44,6 +49,16 @@
 		8CF6BF561DFEE633000D2744 /* Interpolate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF6BF551DFEE633000D2744 /* Interpolate.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8C00F4AC1E0255A300DC6E82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 118FE10A1CEF0525004F2F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 118FE1111CEF0525004F2F51;
+			remoteInfo = "Fish iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		118FE1121CEF0525004F2F51 /* Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118FE1151CEF0525004F2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -59,6 +74,12 @@
 		119E70161CF3CC1700F01BF5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		11E1BB9A1CF1371A0057E18F /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		11E1BB9D1CF137450057E18F /* AssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AssetViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8C00F49F1E01B88500DC6E82 /* APITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APITest.swift; path = ../iOS/APITest.swift; sourceTree = "<group>"; };
+		8C00F4A11E02510500DC6E82 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		8C00F4A71E0255A300DC6E82 /* FishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C00F4A91E0255A300DC6E82 /* FishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishTests.swift; sourceTree = "<group>"; };
+		8C00F4AB1E0255A300DC6E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C00F4B21E02591600DC6E82 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8CCF28041DF6EAC900A57A08 /* Fusuma.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fusuma.framework; path = Carthage/Build/iOS/Fusuma.framework; sourceTree = "<group>"; };
 		8CD7D7461DF7084600453C6F /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
 		8CD7D7481DF7084600453C6F /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumViewCell.swift; sourceTree = "<group>"; };
@@ -94,7 +115,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF6BF561DFEE633000D2744 /* Interpolate.framework in Frameworks */,
+				8C00F4B31E02591600DC6E82 /* Alamofire.framework in Frameworks */,
 				8CCF28051DF6EAC900A57A08 /* Fusuma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C00F4A41E0255A300DC6E82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C00F4B41E02596300DC6E82 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +138,9 @@
 				118FE13C1CEF07EB004F2F51 /* Shared */,
 				118FE1141CEF0525004F2F51 /* iOS */,
 				118FE12E1CEF07DE004F2F51 /* tvOS */,
+				8C00F4A81E0255A300DC6E82 /* FishTests */,
 				118FE1131CEF0525004F2F51 /* Products */,
+				8C00F4B21E02591600DC6E82 /* Alamofire.framework */,
 				8CF6BF551DFEE633000D2744 /* Interpolate.framework */,
 				8CCF28041DF6EAC900A57A08 /* Fusuma.framework */,
 			);
@@ -118,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				118FE1121CEF0525004F2F51 /* Fish.app */,
+				8C00F4A71E0255A300DC6E82 /* FishTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +179,7 @@
 		118FE13C1CEF07EB004F2F51 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8C00F4A11E02510500DC6E82 /* SwiftSpinner.swift */,
 				8CD7D77F1DF711DD00453C6F /* DocumentPickerView.xib */,
 				8CD7D77D1DF70BF900453C6F /* Constants.swift */,
 				8CD7D7751DF709CB00453C6F /* API.swift */,
@@ -168,6 +202,16 @@
 				11E1BB9D1CF137450057E18F /* AssetViewController.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		8C00F4A81E0255A300DC6E82 /* FishTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C00F49F1E01B88500DC6E82 /* APITest.swift */,
+				8C00F4A91E0255A300DC6E82 /* FishTests.swift */,
+				8C00F4AB1E0255A300DC6E82 /* Info.plist */,
+			);
+			path = FishTests;
 			sourceTree = "<group>";
 		};
 		8CD7D7621DF7085100453C6F /* Fusuma */ = {
@@ -209,13 +253,31 @@
 			productReference = 118FE1121CEF0525004F2F51 /* Fish.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8C00F4A61E0255A300DC6E82 /* FishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C00F4AE1E0255A300DC6E82 /* Build configuration list for PBXNativeTarget "FishTests" */;
+			buildPhases = (
+				8C00F4A31E0255A300DC6E82 /* Sources */,
+				8C00F4A41E0255A300DC6E82 /* Frameworks */,
+				8C00F4A51E0255A300DC6E82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C00F4AD1E0255A300DC6E82 /* PBXTargetDependency */,
+			);
+			name = FishTests;
+			productName = FishTests;
+			productReference = 8C00F4A71E0255A300DC6E82 /* FishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		118FE10A1CEF0525004F2F51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = RanAcquat;
 				TargetAttributes = {
@@ -224,6 +286,12 @@
 						DevelopmentTeam = E449Q2SF5F;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
+					};
+					8C00F4A61E0255A300DC6E82 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = E449Q2SF5F;
+						ProvisioningStyle = Manual;
+						TestTargetID = 118FE1111CEF0525004F2F51;
 					};
 				};
 			};
@@ -241,6 +309,7 @@
 			projectRoot = "";
 			targets = (
 				118FE1111CEF0525004F2F51 /* Fish iOS */,
+				8C00F4A61E0255A300DC6E82 /* FishTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +328,13 @@
 				8CD7D7821DF8644800453C6F /* FSCameraViewAdaptive.xib in Resources */,
 				8CD7D75E1DF7084600453C6F /* Fusuma in Resources */,
 				8CD7D7801DF711DD00453C6F /* DocumentPickerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C00F4A51E0255A300DC6E82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +386,7 @@
 				8CD7D7561DF7084600453C6F /* FSAlbumViewCell.swift in Sources */,
 				8CD7D76C1DF7091A00453C6F /* Generator.swift in Sources */,
 				118FE1181CEF0525004F2F51 /* MasterViewController.swift in Sources */,
+				8C00F4A21E02510500DC6E82 /* SwiftSpinner.swift in Sources */,
 				8CD7D7721DF7096E00453C6F /* DocumentPickerRowView.swift in Sources */,
 				8CD7D75F1DF7084600453C6F /* FusumaViewController.swift in Sources */,
 				118FE1161CEF0525004F2F51 /* AppDelegate.swift in Sources */,
@@ -319,7 +396,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C00F4A31E0255A300DC6E82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C00F4B11E0255C300DC6E82 /* APITest.swift in Sources */,
+				8C00F4AA1E0255A300DC6E82 /* FishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C00F4AD1E0255A300DC6E82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 118FE1111CEF0525004F2F51 /* Fish iOS */;
+			targetProxy = 8C00F4AC1E0255A300DC6E82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		118FE11B1CEF0525004F2F51 /* Main.storyboard */ = {
@@ -485,6 +579,50 @@
 			};
 			name = Release;
 		};
+		8C00F4AF1E0255A300DC6E82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E449Q2SF5F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ranacquat.FishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fish.app/Fish";
+			};
+			name = Debug;
+		};
+		8C00F4B01E0255A300DC6E82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E449Q2SF5F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ranacquat.FishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fish.app/Fish";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +643,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8C00F4AE1E0255A300DC6E82 /* Build configuration list for PBXNativeTarget "FishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C00F4AF1E0255A300DC6E82 /* Debug */,
+				8C00F4B01E0255A300DC6E82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,7 @@
 import Foundation
 
 class Constants{
-    let SERVER_URL                  =   "https://app.vialink.biz/mae-dev"
+    let SERVER_URL                  =   "https://primael-prod.apigee.net/v1"
     let MOCK_SERVER_URL             =   "http://localhost:8080"
     let MAE_WEBSOCKET_SERVER_URL    =   "http://localhost:8080/ws"
 

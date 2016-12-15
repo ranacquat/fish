@@ -29,11 +29,10 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
     }
     
     func getPhotos(from album:String)->[UIImage]?{
-        getAlbum(title:"Fish",
+        getAlbum(title:CustomPhotoAlbum.albumName,
                  success:{
                     let fetchOptions    =   PHFetchOptions()
                     fetchOptions.sortDescriptors        =   [NSSortDescriptor(key: "creationDate", ascending: true)]
-                    //fetchOptions.includeHiddenAssets    =   true
                     
                     self.images         =   PHAsset.fetchAssets(in: self.album!, options: fetchOptions
                     )
@@ -77,8 +76,6 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         return self.imagesToReturn
     }
 
-    
-//    private func getAlbum(title:String)->PHAssetCollection?{
     private func getAlbum(title:String, success:@escaping ()->Void, failure:@escaping ()->Void)->Void{
 
         PHPhotoLibrary.shared().register(self as PHPhotoLibraryChangeObserver)
@@ -123,7 +120,7 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
         
         //let exifData = addExif(image)
         
-        getAlbum(title:"Fish",
+        getAlbum(title:CustomPhotoAlbum.albumName,
                  success:{},
                  failure:{})
         
@@ -146,18 +143,22 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
     
     func save(image:UIImage, type:String, success:@escaping ()->Void, failure:@escaping ()->Void){
         
+        NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.4, "title":"Check Geolocation capabilities"])
+        
         if let imageLocation   =   self.appDelegate.location {
+            NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.5, "title":"Get location..."])
             Localizator().getAddress(location: imageLocation, completion: {
                 answer in
+                NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.6, "title":"Got location : \(answer!)"])
                 let date                        =   Date()
                 let textToDraw                  =   "\(type) - \(date) - \(answer!)"
                 
                 let image                       =   self.textToImage(drawText: textToDraw, inImage: image, atPoint: CGPoint.zero)
                 
-                self.getAlbum(title:"Fish", success:{}, failure:{})
+                self.getAlbum(title:CustomPhotoAlbum.albumName, success:{}, failure:{})
                 
                 PHPhotoLibrary.shared().performChanges({
-                    
+                    NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.6, "title":"Adding image to : \(CustomPhotoAlbum.albumName)..."])
                     let assetRequest            =   PHAssetChangeRequest.creationRequestForAsset(from: image)
                     assetRequest.location       =   imageLocation
                     assetRequest.creationDate   =   date
@@ -175,18 +176,20 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
                     {
                         success()
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RELOAD_DEMAND"), object: nil)
+                        NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.7, "title":"Adding image to : \(CustomPhotoAlbum.albumName)...DONE"])
                     }
                 })
             })
         }else{
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LOCALIZATION_FAILED"), object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.55, "title":"Geolocation not activated"])
             
             let date                        =   Date()
             let textToDraw                  =   "\(type) - \(date) - LOCATION UNKNOWN"
             
             let image                       =   self.textToImage(drawText: textToDraw, inImage: image, atPoint: CGPoint.zero)
             
-            self.getAlbum(title:"Fish", success:{
+            self.getAlbum(title:CustomPhotoAlbum.albumName, success:{
                 PHPhotoLibrary.shared().performChanges({
                     
                     let assetRequest            =   PHAssetChangeRequest.creationRequestForAsset(from: image)
@@ -205,6 +208,7 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
                     {
                         success()
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RELOAD_DEMAND"), object: nil)
+                        NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.7, "title":"Adding image to : \(CustomPhotoAlbum.albumName)...DONE"])
                     }
                 })
             }, failure:{
@@ -218,8 +222,10 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
     }
 
     func createAlbum(title:String, success:@escaping ()->Void, failure:()->Void){
+        NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.6, "title":"Album Creation"])
+        
         let fetchOptions = PHFetchOptions()
-        fetchOptions.predicate = NSPredicate(format: "title = 'Fish'")
+        fetchOptions.predicate = NSPredicate(format: "title = '\(CustomPhotoAlbum.albumName)'")
         
         let result = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
         let rec = result.firstObject as PHAssetCollection!
@@ -229,6 +235,7 @@ class CustomPhotoAlbum: NSObject,CLLocationManagerDelegate {
             }, completionHandler: { successFull, error in
                 if !successFull { print("error creating album: \(error)") }
                 else{
+                    NotificationCenter.default.post(name: Notification.Name(rawValue:"SPINNER_SHOW"), object: ["progress":0.65, "title":"Album created"])
                     success()
                 }
             })

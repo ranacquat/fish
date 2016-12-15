@@ -19,7 +19,7 @@ class API{
     
     class func post(document:Document, success:@escaping (Results) -> Void, failure:@escaping(Error)-> Void){
         
-        let server = URL(string: ("\(Constants().SERVER_URL)/document/check"))
+        let server = URL(string: ("\(Constants().SERVER_URL)/detection"))
         
         API.upload(image: document.info["IMAGE"] as! Data, to: server!, success:{
             response in
